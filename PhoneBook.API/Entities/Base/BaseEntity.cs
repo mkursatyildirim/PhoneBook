@@ -6,7 +6,7 @@ namespace PhoneBook.API.Entities.Base
     {
         [Key]
         [Required]
-        public Guid Id { get; set; }
+        public Guid UUID { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.UtcNow;
     }
 }
