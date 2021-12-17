@@ -11,5 +11,8 @@ namespace PhoneBook.API.Entities.Context
         protected PhoneBookContext()
         {
         }
+
+        public virtual DbSet<Person> Persons { get; set; }
+        public virtual DbSet<ContactInformation> ContactInformations { get; set; }
     }
 }
