@@ -1,8 +1,9 @@
-﻿using PhoneBook.API.Enums;
+﻿using PhoneBook.API.Entities.Base;
+using PhoneBook.API.Enums;
 
 namespace PhoneBook.API.Entities
 {
-    public class ContactInformation
+    public class ContactInformation : BaseEntity
     {
         public InformationType InformationType { get; set; }
         public string InformationContent { get; set; }
