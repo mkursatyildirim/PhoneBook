@@ -78,28 +78,41 @@ namespace PhoneBook.API.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<PersonDto>>> GetAllPersons()
         {
             var persons = await _personService.GetAllPersons();
 
             if (persons.Count() == 0)
-                return NoContent();
+                return NotFound("Rehberde kayıtlı kişi bulunamadı.");
 
             return Ok(persons);
         }
 
         [HttpGet("{personId}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<PersonDto>> GetPerson(Guid personId)
         {
             var person = await _personService.GetPerson(personId);
 
             if(person == null)
-                return NoContent();
+                return NotFound("Kişi bulunamadı.");
 
             return Ok(person);
+        }
+
+        [HttpGet("{personId}/Detail")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<PersonDetailDto>> GetPersonDetail(Guid personId)
+        {
+            var result = await _personService.GetPersonDetail(personId);
+
+            if (result == null)
+                return NotFound("Kişi bilgisi bulunamadı.");
+
+            return Ok(result);
         }
     }
 }

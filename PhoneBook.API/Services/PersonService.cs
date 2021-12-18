@@ -88,5 +88,27 @@ namespace PhoneBook.API.Services
                 Company = p.Company
             }).FirstOrDefaultAsync();
         }
+
+        public async Task<PersonDetailDto> GetPersonDetail(Guid personId)
+        {
+            var result = await _context.Persons.Where(p => p.UUID == personId).Select(p => new PersonDetailDto
+            {
+                Person = new PersonDto()
+                {
+                    UUID = p.UUID,
+                    Name = p.Name,
+                    Surname = p.Surname,
+                    Company = p.Company
+                },
+                ContactInformations = p.ContactInformations.Select(ci => new ContactInformationDto
+                {
+                    UUID = ci.UUID,
+                    InformationType = ci.InformationType,
+                    InformationContent = ci.InformationContent
+                }).ToList()
+            }).FirstOrDefaultAsync();
+
+            return result;
+        }
     }
 }

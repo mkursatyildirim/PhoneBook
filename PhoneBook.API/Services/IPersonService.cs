@@ -8,5 +8,6 @@ namespace PhoneBook.API.Services
         Task<ReturnDto> DeletePerson(Guid personId);
         Task<IEnumerable<PersonDto>> GetAllPersons();
         Task<PersonDto> GetPerson(Guid personId);
+        Task<PersonDetailDto> GetPersonDetail(Guid personId);
     }
 }
