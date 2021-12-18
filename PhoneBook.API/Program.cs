@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PhoneBook.API.Entities.Context;
+using PhoneBook.API.Middlewares;
 using PhoneBook.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +23,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 
