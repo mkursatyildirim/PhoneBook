@@ -30,7 +30,7 @@ namespace PhoneBook.API.Controllers
         public async Task<ActionResult> GenerateReport()
         {
             var client = _httpClientFactory.CreateClient();
-            var request = new HttpRequestMessage(HttpMethod.Post, $"{_phoneBookSettings.ReportApiUrl}/Raporlar/Talep");
+            var request = new HttpRequestMessage(HttpMethod.Post, $"{_phoneBookSettings.ReportApiUrl}/Reports/Request");
             var response = await client.SendAsync(request);
 
             if (!response.IsSuccessStatusCode)

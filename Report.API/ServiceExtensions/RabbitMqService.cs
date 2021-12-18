@@ -11,7 +11,7 @@ namespace Report.API.ServiceExtensions
 {
     public static class RabbitMqService
     {
-        public static void UseRabbitMq(this IApplicationBuilder app)
+        public static IApplicationBuilder UseRabbitMq(this IApplicationBuilder app)
         {
             var _reportSettings = app.ApplicationServices.GetRequiredService<IOptions<ReportSettings>>().Value;
 
@@ -37,14 +37,16 @@ namespace Report.API.ServiceExtensions
 
             consumerEvent.Received += (ch, ea) =>
             {
-                var raporService = app.ApplicationServices.GetRequiredService<IReportService>();
+                var reportService = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<IReportService>();
                 var incomingModel = JsonConvert.DeserializeObject<ReportRequestDto>(Encoding.UTF8.GetString(ea.Body.ToArray()));
                 Console.WriteLine("Data received");
                 Console.WriteLine($"Received Id: {incomingModel.ReportId}");
-                raporService.GenerateStatisticsReport(incomingModel.ReportId);
+                reportService.GenerateStatisticsReport(incomingModel.ReportId);
             };
 
             channel.BasicConsume(createDocumentQueue, true, consumerEvent);
+
+            return app;
         }
     }
 }
