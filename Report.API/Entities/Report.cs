@@ -9,5 +9,6 @@ namespace Report.API.Entities
     {
         public DateTime RequestDate { get; set; }
         public ReportStatus ReportStatus { get; set; }
+        public virtual ReportDetail ReportDetail { get; set; }
     }
 }

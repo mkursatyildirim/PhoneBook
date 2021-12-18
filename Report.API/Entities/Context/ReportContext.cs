@@ -9,5 +9,6 @@ namespace Report.API.Entities.Context
         }
 
         public DbSet<Report> Reports { get; set; }
+        public DbSet<ReportDetail> ReportDetails { get; set; }
     }
 }
