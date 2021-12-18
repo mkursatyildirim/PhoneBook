@@ -66,5 +66,16 @@ namespace PhoneBook.API.Services
                 Data = result
             };
         }
+
+        public async Task<IEnumerable<PersonDto>> GetAllPersons()
+        {
+            return await _context.Persons.Select(p => new PersonDto
+            {
+                UUID = p.UUID,
+                Name = p.Name,
+                Surname = p.Surname,
+                Company = p.Company,
+            }).ToListAsync();
+        }
     }
 }

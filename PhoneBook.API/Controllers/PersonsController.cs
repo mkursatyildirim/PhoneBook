@@ -75,5 +75,18 @@ namespace PhoneBook.API.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public async Task<ActionResult<IEnumerable<PersonDto>>> GetAllPersons()
+        {
+            var persons = await _personService.GetAllPersons();
+
+            if (persons.Count() == 0)
+                return NoContent();
+
+            return Ok(persons);
+        }
     }
 }
