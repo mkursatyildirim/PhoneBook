@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Report.API.Constants;
 using Report.API.Dto;
+using Report.API.Entities;
 using Report.API.Entities.Context;
 using Report.API.Enums;
 using Entites = Report.API.Entities;
@@ -40,15 +41,17 @@ namespace Report.API.Services
             var responseStream = await response.Content.ReadAsStringAsync();
             var contactInformations = JsonConvert.DeserializeObject<IEnumerable<ContactInformationDto>>(responseStream);
 
-            var statisticsReport = contactInformations.Where(x => x.InformationType == 2).Select(x => x.InformationContent).Distinct().Select(x => new
+            var statisticsReport = contactInformations.Where(x => x.InformationType == 2).Select(x => x.InformationContent).Distinct().Select(x => new ReportDetail
             {
+                ReportId = reportId,
                 Location = x,
-                TotalPersonCount = contactInformations.Where(y => y.InformationType == 2 && y.InformationContent == x).Count(),
-                TotalPhoneNumberCount = contactInformations.Where(y => y.InformationType == 0 && contactInformations.Where(y => y.InformationType == 2 && y.InformationContent == x).Select(x => x.PersonId).Contains(y.PersonId)).Count()
+                PersonCount = contactInformations.Where(y => y.InformationType == 2 && y.InformationContent == x).Count(),
+                PhoneNumberCount = contactInformations.Where(y => y.InformationType == 0 && contactInformations.Where(y => y.InformationType == 2 && y.InformationContent == x).Select(x => x.PersonId).Contains(y.PersonId)).Count()
             });
 
             report.ReportStatus = ReportStatus.Completed;
-            // ToDo: Detaylar oluşturulacak.
+
+            await _context.ReportDetails.AddRangeAsync(statisticsReport);
             await _context.SaveChangesAsync();
         }
 
