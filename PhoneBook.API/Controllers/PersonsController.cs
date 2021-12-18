@@ -114,5 +114,13 @@ namespace PhoneBook.API.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet("ContactInformations")]
+        public async Task<ActionResult<IEnumerable<ContactInformationDto>>> GetAllContactInformations()
+        {
+            var result = await _contactInformationService.GetAllContactInformations();
+
+            return Ok(result);
+        }
     }
 }

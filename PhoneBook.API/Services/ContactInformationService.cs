@@ -68,5 +68,18 @@ namespace PhoneBook.API.Services
                 Data = contactInformation
             };
         }
+
+        public async Task<IEnumerable<ContactInformationDto>> GetAllContactInformations()
+        {
+            var contactInformations = await _context.ContactInformations.Select(ci => new ContactInformationDto
+            {
+                UUID = ci.UUID,
+                InformationContent = ci.InformationContent,
+                InformationType = ci.InformationType,
+                PersonId = ci.PersonUUID
+            }).ToListAsync();
+
+            return contactInformations;
+        }
     }
 }

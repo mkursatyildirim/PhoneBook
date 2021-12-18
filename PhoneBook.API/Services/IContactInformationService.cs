@@ -6,5 +6,6 @@ namespace PhoneBook.API.Services
     {
         Task<ReturnDto> AddContactInformation(Guid personId, ContactInformationDto contactInformationDto);
         Task<ReturnDto> DeleteContactInformation(Guid contactInformationId);
+        Task<IEnumerable<ContactInformationDto>> GetAllContactInformations();
     }
 }
