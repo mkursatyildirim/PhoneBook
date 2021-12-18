@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PhoneBook.API.Entities.Context;
+using PhoneBook.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PhoneBookContext>(option => option.UseNpgsql(builder.Configuration.GetConnectionString("ConString")));
+builder.Services.AddScoped<IPersonService, PersonService>();
 
 var app = builder.Build();
 
