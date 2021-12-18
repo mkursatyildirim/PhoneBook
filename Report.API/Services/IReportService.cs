@@ -7,5 +7,6 @@ namespace Report.API.Services
         Task<Guid> CreateNewReport();
         Task GenerateStatisticsReport(Guid reportId);
         Task<List<ReportDto>> GetAllReports();
+        Task<ReportDetailDto> GetReportDetail(Guid reportId);
     }
 }

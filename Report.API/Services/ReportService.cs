@@ -80,5 +80,28 @@ namespace Report.API.Services
 
             return reports;
         }
+
+        public async Task<ReportDetailDto> GetReportDetail(Guid reportId)
+        {
+            var reportDetails = await _context.Reports.Where(r => r.UUID == reportId).Select(r =>
+             new ReportDetailDto()
+             {
+                 Report = new ReportDto()
+                 {
+                     UUID = reportId,
+                     ReportStatus = r.ReportStatus,
+                     RequestDate = r.RequestDate
+                 },
+                 ReportDetails = r.ReportDetails.Select(rd => new StatisticDto()
+                 {
+                     UUID = rd.UUID,
+                     Location = rd.Location,
+                     PersonCount = rd.PersonCount,
+                     PhoneNumberCount = rd.PhoneNumberCount
+                 }).ToList()
+             }).FirstOrDefaultAsync();
+
+            return reportDetails;
+        }
     }
 }

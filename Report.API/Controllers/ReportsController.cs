@@ -17,6 +17,7 @@ namespace Report.API.Controllers
         }
 
         [HttpPost("Request")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<Guid>> ReportRequest()
         {
             var result = await _reportService.CreateNewReport();
@@ -24,9 +25,23 @@ namespace Report.API.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<ReportDto>>> GetAllReports()
         {
             var result = await _reportService.GetAllReports();
+            return Ok(result);
+        }
+
+        [HttpGet("{reportId}/Detail")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ReportDetailDto>> GetReportDetail(Guid reportId)
+        {
+            var result = await _reportService.GetReportDetail(reportId);
+
+            if (result == null)
+                return NotFound();
+
             return Ok(result);
         }
     }
