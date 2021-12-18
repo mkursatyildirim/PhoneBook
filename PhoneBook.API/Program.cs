@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using PhoneBook.API.Constants;
 using PhoneBook.API.Entities.Context;
 using PhoneBook.API.Middlewares;
 using PhoneBook.API.Services;
@@ -14,6 +15,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PhoneBookContext>(option => option.UseNpgsql(builder.Configuration.GetConnectionString("ConString")));
 builder.Services.AddScoped<IPersonService, PersonService>();
 builder.Services.AddScoped<IContactInformationService, ContactInformationService>();
+builder.Services.Configure<PhoneBookSettings>(builder.Configuration.GetSection("Options"));
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
