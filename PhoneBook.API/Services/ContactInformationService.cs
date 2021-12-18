@@ -39,7 +39,7 @@ namespace PhoneBook.API.Services
             return new ReturnDto()
             {
                 IsSuccess = true,
-                Message = $"{person.Name}  {person.Surname} adlı kişi için iletişim bilgileri eklendi.",
+                Message = $"{person.Name} {person.Surname} adlı kişi için iletişim bilgileri eklendi.",
                 Data = contactInformation
             };
         }
