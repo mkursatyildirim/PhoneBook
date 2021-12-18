@@ -43,5 +43,30 @@ namespace PhoneBook.API.Services
                 Data = contactInformation
             };
         }
+
+        public async Task<ReturnDto> DeleteContactInformation(Guid contactInformationId)
+        {
+            var contactInformation = await _context.ContactInformations.Where(ci => ci.UUID == contactInformationId).FirstOrDefaultAsync();
+
+            if(contactInformation == null)
+            {
+                return new ReturnDto()
+                {
+                    IsSuccess = false,
+                    Message = "Silinecek iletişim bilgisi bulunamadı.",
+                    Data = null
+                };
+            }
+
+            _context.ContactInformations.Remove(contactInformation);
+            await _context.SaveChangesAsync();
+
+            return new ReturnDto()
+            {
+                IsSuccess = true,
+                Message = "İletişim bilgisi silindi.",
+                Data = contactInformation
+            };
+        }
     }
 }

@@ -62,5 +62,18 @@ namespace PhoneBook.API.Controllers
 
             return NotFound(result.Message);
         }
+
+        [HttpDelete("ContactInformations/{contactInformationId}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ReturnDto>> DeleteContactInformation([FromRoute] Guid contactInformationId)
+        {
+            var result = await _contactInformationService.DeleteContactInformation(contactInformationId);
+
+            if (!result.IsSuccess)
+                return NotFound(result.Message);
+
+            return Ok(result);
+        }
     }
 }
