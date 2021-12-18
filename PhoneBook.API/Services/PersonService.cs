@@ -77,5 +77,16 @@ namespace PhoneBook.API.Services
                 Company = p.Company,
             }).ToListAsync();
         }
+
+        public async Task<PersonDto> GetPerson(Guid personId)
+        {
+            return await _context.Persons.Where(p => p.UUID == personId).Select(p => new PersonDto
+            {
+                UUID = p.UUID,
+                Name = p.Name,
+                Surname = p.Surname,
+                Company = p.Company
+            }).FirstOrDefaultAsync();
+        }
     }
 }

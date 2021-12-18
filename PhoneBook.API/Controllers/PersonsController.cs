@@ -88,5 +88,18 @@ namespace PhoneBook.API.Controllers
 
             return Ok(persons);
         }
+
+        [HttpGet("{personId}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public async Task<ActionResult<PersonDto>> GetPerson(Guid personId)
+        {
+            var person = await _personService.GetPerson(personId);
+
+            if(person == null)
+                return NoContent();
+
+            return Ok(person);
+        }
     }
 }
