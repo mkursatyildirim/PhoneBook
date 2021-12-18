@@ -30,5 +30,18 @@ namespace PhoneBook.API.Controllers
 
             return BadRequest(result.Message);
         }
+
+        [HttpDelete("{personId}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ReturnDto>> DeletePerson([FromRoute] Guid personId)
+        {
+            var result = await _personService.DeletePerson(personId);
+
+            if (!result.IsSuccess)
+                return NotFound(result.Message);
+
+            return Ok(result);
+        }
     }
 }

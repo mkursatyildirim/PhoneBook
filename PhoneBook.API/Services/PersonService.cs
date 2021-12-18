@@ -1,4 +1,5 @@
-﻿using PhoneBook.API.Dto;
+﻿using Microsoft.EntityFrameworkCore;
+using PhoneBook.API.Dto;
 using PhoneBook.API.Entities;
 using PhoneBook.API.Entities.Context;
 using PhoneBook.API.Services.Base;
@@ -38,6 +39,31 @@ namespace PhoneBook.API.Services
                 IsSuccess = false,
                 Message = "Kişi eklenemedi.",
                 Data = null
+            };
+        }
+
+        public async Task<ReturnDto> DeletePerson(Guid personId)
+        {
+            var result = await _context.Persons.Where(p => p.UUID == personId).FirstOrDefaultAsync();
+
+            if (result == null)
+            {
+                return new ReturnDto
+                {
+                    IsSuccess = false,
+                    Message = "Silinecek kişi bulunamadı.",
+                    Data = null
+                };
+            }
+
+            _context.Persons.Remove(result);
+            await _context.SaveChangesAsync();
+
+            return new ReturnDto
+            {
+                IsSuccess = true,
+                Message = "Kişi silindi.",
+                Data = result
             };
         }
     }
