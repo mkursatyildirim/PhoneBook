@@ -68,5 +68,17 @@ namespace Report.API.Services
 
             return report.UUID;
         }
+
+        public async Task<List<ReportDto>> GetAllReports()
+        {
+            var reports = await _context.Reports.Select(r => new ReportDto()
+            {
+                UUID = r.UUID,
+                ReportStatus = r.ReportStatus,
+                RequestDate = r.RequestDate
+            }).ToListAsync();
+
+            return reports;
+        }
     }
 }
