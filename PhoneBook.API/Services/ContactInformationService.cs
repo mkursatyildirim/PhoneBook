@@ -39,7 +39,7 @@ namespace PhoneBook.API.Services
             return new ReturnDto()
             {
                 IsSuccess = true,
-                Message = $"{person.Name + " " + person.Surname} adlı kişi için iletişim bilgileri eklendi.",
+                Message = $"{person.Name}  {person.Surname} adlı kişi için iletişim bilgileri eklendi.",
                 Data = contactInformation
             };
         }
@@ -48,7 +48,7 @@ namespace PhoneBook.API.Services
         {
             var contactInformation = await _context.ContactInformations.Where(ci => ci.UUID == contactInformationId).FirstOrDefaultAsync();
 
-            if(contactInformation == null)
+            if (contactInformation == null)
             {
                 return new ReturnDto()
                 {
