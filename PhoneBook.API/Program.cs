@@ -12,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PhoneBookContext>(option => option.UseNpgsql(builder.Configuration.GetConnectionString("ConString")));
 builder.Services.AddScoped<IPersonService, PersonService>();
+builder.Services.AddScoped<IContactInformationService, ContactInformationService>();
 
 var app = builder.Build();
 

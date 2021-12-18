@@ -9,10 +9,12 @@ namespace PhoneBook.API.Controllers
     public class PersonsController : ControllerBase
     {
         private readonly IPersonService _personService;
+        private readonly IContactInformationService _contactInformationService;
 
-        public PersonsController(IPersonService personService)
+        public PersonsController(IPersonService personService, IContactInformationService contactInformationService)
         {
             _personService = personService;
+            _contactInformationService = contactInformationService;
         }
 
         [HttpPost]
@@ -42,6 +44,23 @@ namespace PhoneBook.API.Controllers
                 return NotFound(result.Message);
 
             return Ok(result);
+        }
+
+        [HttpPost("{personId}/ContactInformations")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ReturnDto>> AddContactInformation([FromRoute] Guid personId, [FromBody] ContactInformationDto contactInformationDto)
+        {
+            if (contactInformationDto == null)
+                return BadRequest();
+
+            var result = await _contactInformationService.AddContactInformation(personId, contactInformationDto);
+
+            if (result.IsSuccess)
+                return Created("", result);
+
+            return NotFound(result.Message);
         }
     }
 }
