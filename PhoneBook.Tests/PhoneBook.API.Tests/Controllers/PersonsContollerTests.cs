@@ -39,7 +39,7 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Controllers
         }
 
         [Fact]
-        public async Task AddPerson_With_Invalid_Params_Should_Return_Null()
+        public async Task AddPerson_With_Invalid_Params_Should_Return_400()
         {
             var mockPersonService = new Mock<IPersonService>();
             mockPersonService
@@ -53,6 +53,8 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Controllers
 
             var result = await personsController.AddPerson(null);
 
+            var badRequestResult = Assert.IsType<BadRequestResult>(result.Result);
+            Assert.IsType<BadRequestResult>(badRequestResult);
             Assert.Null(result.Value);
         }
 
@@ -121,7 +123,7 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Controllers
         }
 
         [Fact]
-        public async Task AddContactInformation_With_Invalid_Params_Should_Return_Null()
+        public async Task AddContactInformation_With_Invalid_Params_Should_Return_400()
         {
             var mockContactInformationService = new Mock<IContactInformationService>();
 
@@ -139,6 +141,8 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Controllers
 
             var result = await personsController.AddContactInformation(id, null);
 
+            var badRequestResult = Assert.IsType<BadRequestResult>(result.Result);
+            Assert.IsType<BadRequestResult>(badRequestResult);
             Assert.Null(result.Value);
         }
 
