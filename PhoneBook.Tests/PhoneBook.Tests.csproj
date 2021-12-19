@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Report.API.Tests\Controllers\" />
     <Folder Include="Report.API.Tests\Services\" />
   </ItemGroup>
 
