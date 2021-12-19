@@ -237,5 +237,20 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Controllers
 
             Assert.Equal(200, TestHelper.GetStatusCodeFromActionResult(result));
         }
+
+        [Fact]
+        public async Task GetPersonDetail_With_Valid_Params_Should_Return_200()
+        {
+            var mockPersonService = new Mock<IPersonService>();
+            mockPersonService
+                .Setup(x => x.GetPersonDetail(It.IsAny<Guid>()))
+                .ReturnsAsync(new PersonDetailDto() { });
+
+            var personsController = new PersonsController(mockPersonService.Object, new Mock<IContactInformationService>().Object);
+
+            var result = await personsController.GetPersonDetail(Guid.NewGuid());
+
+            Assert.Equal(200, TestHelper.GetStatusCodeFromActionResult(result));
+        }
     }
 }
