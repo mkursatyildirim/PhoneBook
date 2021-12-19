@@ -75,13 +75,15 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-man
 
 # Proje Mimarisi Genel Bakış
 
-![phone_book_diagrams](C:\Users\mkurs\Desktop\readme-soruces\phone_book_diagrams.png)
+![phone_book_diagrams](.\readme-soruces\phone_book_diagrams.png)
 
 
 
 # Unit Test Code Coverage Sonuçları
 
-![code_coverage](C:\Users\mkurs\Desktop\readme-soruces\code_coverage.png)
+![code_coverage](.\readme-soruces\code_coverage.png)
+
+
 
 
 
