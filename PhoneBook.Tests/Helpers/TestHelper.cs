@@ -11,14 +11,14 @@ namespace PhoneBook.Tests.Helpers
         public static DbContextOptions<PhoneBookContext> GetPhoneBookContextForInMemoryDb()
         {
             return new DbContextOptionsBuilder<PhoneBookContext>()
-                .UseInMemoryDatabase(databaseName: "PhoneBook" + DateTime.Now)
+                .UseInMemoryDatabase(databaseName: "PhoneBook" + Guid.NewGuid())
                 .Options;
         }
 
         public static DbContextOptions<ReportContext> GetReportContextForInMemoryDb()
         {
             return new DbContextOptionsBuilder<ReportContext>()
-                .UseInMemoryDatabase(databaseName: "Report" + DateTime.Now)
+                .UseInMemoryDatabase(databaseName: "Report" + Guid.NewGuid())
                 .Options;
         }
 

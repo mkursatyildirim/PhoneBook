@@ -77,5 +77,33 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Services
             
             Assert.Equal(1, context.Persons.Count());
         }
+
+        [Fact]
+        public async Task GetAllPersons_Should_Get_All_Persons()
+        {
+            var context = new PhoneBookContext(TestHelper.GetPhoneBookContextForInMemoryDb());
+
+            context.Persons.Add(new Person()
+            {
+                Name = "Muhammet Kürşat",
+                Surname = "YILDIRIM",
+                Company = "Kardelen Yazılım"
+            });
+
+            context.Persons.Add(new Person()
+            {
+                Name = "John",
+                Surname = "Doe",
+                Company = "Bla Bla Inc."
+            });
+
+            await context.SaveChangesAsync();
+
+            var service = new PersonService(context);
+
+            var result = await service.GetAllPersons();
+
+            Assert.Equal(2, context.Persons.Count());
+        }
     }
 }
