@@ -6,6 +6,8 @@ using PhoneBook.API.Enums;
 using PhoneBook.API.Services;
 using PhoneBook.Tests.Helpers;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -204,6 +206,21 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Controllers
             var result = await personsController.DeleteContactInformation(Guid.Empty);
 
             Assert.Equal(404, TestHelper.GetStatusCodeFromActionResult(result));
+        }
+
+        [Fact]
+        public async Task GetAllPersons_Should_Return_200()
+        {
+            var mockPersonService = new Mock<IPersonService>();
+            mockPersonService
+                .Setup(x => x.GetAllPersons())
+                .ReturnsAsync(new List<PersonDto>(){ });
+
+            var personsController = new PersonsController(mockPersonService.Object, new Mock<IContactInformationService>().Object);
+
+            var result = await personsController.GetAllPersons();
+
+            Assert.Equal(200, TestHelper.GetStatusCodeFromActionResult(result));
         }
     }
 }

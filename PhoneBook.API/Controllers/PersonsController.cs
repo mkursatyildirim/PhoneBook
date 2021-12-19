@@ -78,13 +78,9 @@ namespace PhoneBook.API.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<PersonDto>>> GetAllPersons()
         {
             var persons = await _personService.GetAllPersons();
-
-            if (persons.Count() == 0)
-                return NotFound("Rehberde kayıtlı kişi bulunamadı.");
 
             return Ok(persons);
         }
