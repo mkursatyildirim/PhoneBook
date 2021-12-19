@@ -126,5 +126,27 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Services
 
             Assert.False(result.IsSuccess);
         }
+
+        [Fact]
+        public async Task GetAllContactInformations_Should_Get_All_Contact_Information()
+        {
+            var context = new PhoneBookContext(TestHelper.GetPhoneBookContextForInMemoryDb());
+
+            var contactInformationId = Guid.NewGuid();
+            context.ContactInformations.Add(new ContactInformation()
+            {
+                UUID = contactInformationId,
+                InformationType = InformationType.Location,
+                InformationContent = "Mersin"
+            });
+
+            await context.SaveChangesAsync();
+
+            var service = new ContactInformationService(context);
+
+            var result = await service.DeleteContactInformation(contactInformationId);
+
+            Assert.NotNull(result);
+        }
     }
 }
