@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="PhoneBook.API.Tests\Services\" />
     <Folder Include="Report.API.Tests\Controllers\" />
     <Folder Include="Report.API.Tests\Services\" />
   </ItemGroup>
