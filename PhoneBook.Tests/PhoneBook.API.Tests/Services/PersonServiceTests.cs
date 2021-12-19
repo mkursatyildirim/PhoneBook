@@ -33,6 +33,8 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Services
                 Company = "Bla Bla Inc."
             });
 
+            await context.SaveChangesAsync();
+
             var service = new PersonService(context);
 
             var result = await service.AddPerson(new PersonDto()
@@ -43,6 +45,37 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Services
             });
 
             Assert.Equal(3, context.Persons.Count());
+        }
+
+        [Fact]
+        public async Task DeletePerson_With_Valid_Params_Should_Delete_Person()
+        {
+            var context = new PhoneBookContext(TestHelper.GetPhoneBookContextForInMemoryDb());
+
+            var deletedPersonId = Guid.NewGuid();
+
+            context.Persons.Add(new Person()
+            {
+                UUID = deletedPersonId,
+                Name = "Muhammet Kürşat",
+                Surname = "YILDIRIM",
+                Company = "Kardelen Yazılım"
+            });
+
+            context.Persons.Add(new Person()
+            {
+                Name = "John",
+                Surname = "Doe",
+                Company = "Bla Bla Inc."
+            });
+
+            await context.SaveChangesAsync();
+
+            var service = new PersonService(context);
+
+            var result = await service.DeletePerson(deletedPersonId);
+            
+            Assert.Equal(1, context.Persons.Count());
         }
     }
 }
