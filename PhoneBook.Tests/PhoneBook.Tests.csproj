@@ -27,10 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Report.API.Tests\Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\PhoneBook.API\PhoneBook.API.csproj" />
     <ProjectReference Include="..\Report.API\Report.API.csproj" />
   </ItemGroup>

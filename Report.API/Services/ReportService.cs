@@ -21,7 +21,7 @@ namespace Report.API.Services
             _context = context;
             _httpClientFactory = httpClientFactory;
             _logger = logger;
-            _reportSettings = reportSettings.Value;
+            _reportSettings = reportSettings?.Value;
         }
 
         public async Task GenerateStatisticsReport(Guid reportId)
