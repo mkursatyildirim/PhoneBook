@@ -82,5 +82,49 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Services
 
             Assert.False(result.IsSuccess);
         }
+
+        [Fact]
+        public async Task DeleteContactInformation_With_Valid_Params_Should_Delete_Contact_Information()
+        {
+            var context = new PhoneBookContext(TestHelper.GetPhoneBookContextForInMemoryDb());
+
+            var contactInformationId = Guid.NewGuid();
+            context.ContactInformations.Add(new ContactInformation()
+            {
+                UUID = contactInformationId,
+                InformationType = InformationType.Location,
+                InformationContent = "Mersin"
+            });
+
+            await context.SaveChangesAsync();
+
+            var service = new ContactInformationService(context);
+
+            var result = await service.DeleteContactInformation(contactInformationId);
+
+            Assert.True(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task DeleteContactInformation_With_Invalid_Params_Should_Not_Delete_Contact_Information()
+        {
+            var context = new PhoneBookContext(TestHelper.GetPhoneBookContextForInMemoryDb());
+
+            var contactInformationId = Guid.NewGuid();
+            context.ContactInformations.Add(new ContactInformation()
+            {
+                UUID = contactInformationId,
+                InformationType = InformationType.Location,
+                InformationContent = "Mersin"
+            });
+
+            await context.SaveChangesAsync();
+
+            var service = new ContactInformationService(context);
+
+            var result = await service.DeleteContactInformation(Guid.Empty);
+
+            Assert.False(result.IsSuccess);
+        }
     }
 }
