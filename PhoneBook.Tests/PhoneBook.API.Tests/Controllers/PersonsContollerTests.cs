@@ -164,5 +164,46 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Controllers
 
             Assert.Equal(404, TestHelper.GetStatusCodeFromActionResult(result));
         }
+
+        [Fact]
+        public async Task DeleteContactInformation_With_Valid_Params_Should_Return_200()
+        {
+            var mockContactInformationService = new Mock<IContactInformationService>();
+
+            var id = Guid.NewGuid();
+            mockContactInformationService
+                .Setup(x => x.DeleteContactInformation(id))
+                .ReturnsAsync(() => new ReturnDto()
+                {
+                    IsSuccess = true
+                });
+
+            var personsController = new PersonsController(new Mock<IPersonService>().Object, mockContactInformationService.Object);
+
+
+            var result = await personsController.DeleteContactInformation(id);
+
+            Assert.Equal(200, TestHelper.GetStatusCodeFromActionResult(result));
+        }
+
+        [Fact]
+        public async Task DeleteContactInformation_With_Valid_Params_But_No_Person_Should_Return_404()
+        {
+            var mockContactInformationService = new Mock<IContactInformationService>();
+
+            mockContactInformationService
+                .Setup(x => x.DeleteContactInformation(Guid.Empty))
+                .ReturnsAsync(() => new ReturnDto()
+                {
+                    IsSuccess = false
+                });
+
+            var personsController = new PersonsController(new Mock<IPersonService>().Object, mockContactInformationService.Object);
+
+
+            var result = await personsController.DeleteContactInformation(Guid.Empty);
+
+            Assert.Equal(404, TestHelper.GetStatusCodeFromActionResult(result));
+        }
     }
 }
