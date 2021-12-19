@@ -20,5 +20,17 @@ namespace PhoneBook.Tests.Report.API.Tests.Controllers
 
             Assert.Equal(200, TestHelper.GetStatusCodeFromActionResult(result));
         }
+
+        [Fact]
+        public async Task GetAllReports_Should_Return_200()
+        {
+            var mockReportService = new Mock<IReportService>();
+
+            var personsController = new ReportsController(mockReportService.Object);
+
+            var result = await personsController.GetAllReports();
+
+            Assert.Equal(200, TestHelper.GetStatusCodeFromActionResult(result));
+        }
     }
 }
