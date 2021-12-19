@@ -136,5 +136,36 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Services
 
             Assert.NotNull(result);
         }
+
+        [Fact]
+        public async Task GetPersonDetail_With_Valid_Params_Should_Get_Person_And_Details()
+        {
+            var context = new PhoneBookContext(TestHelper.GetPhoneBookContextForInMemoryDb());
+
+            var searchPersonId = Guid.NewGuid();
+
+            context.Persons.Add(new Person()
+            {
+                UUID = searchPersonId,
+                Name = "Muhammet Kürşat",
+                Surname = "YILDIRIM",
+                Company = "Kardelen Yazılım"
+            });
+
+            context.Persons.Add(new Person()
+            {
+                Name = "John",
+                Surname = "Doe",
+                Company = "Bla Bla Inc."
+            });
+
+            await context.SaveChangesAsync();
+
+            var service = new PersonService(context);
+
+            var result = await service.GetPersonDetail(searchPersonId);
+
+            Assert.NotNull(result);
+        }
     }
 }
