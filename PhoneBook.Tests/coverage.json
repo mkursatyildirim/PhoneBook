@@ -1,0 +1,2127 @@
+{
+  "PhoneBook.API.dll": {
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Program.cs": {
+      "Program": {
+        "System.Void Program::<Main>$(System.String[])": {
+          "Lines": {
+            "7": 0,
+            "11": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "32": 0,
+            "34": 0,
+            "36": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 215,
+              "EndOffset": 217,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 215,
+              "EndOffset": 235,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Services\\ContactInformationService.cs": {
+      "PhoneBook.API.Services.ContactInformationService": {
+        "System.Void PhoneBook.API.Services.ContactInformationService::.ctor(PhoneBook.API.Entities.Context.PhoneBookContext)": {
+          "Lines": {
+            "11": 5,
+            "12": 5,
+            "13": 5
+          },
+          "Branches": []
+        }
+      },
+      "PhoneBook.API.Services.ContactInformationService/<AddContactInformation>d__1": {
+        "System.Void PhoneBook.API.Services.ContactInformationService/<AddContactInformation>d__1::MoveNext()": {
+          "Lines": {
+            "16": 2,
+            "17": 2,
+            "19": 2,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "36": 1,
+            "37": 1,
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 2
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 349,
+              "EndOffset": 351,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 19,
+              "Offset": 349,
+              "EndOffset": 391,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "PhoneBook.API.Services.ContactInformationService/<DeleteContactInformation>d__2": {
+        "System.Void PhoneBook.API.Services.ContactInformationService/<DeleteContactInformation>d__2::MoveNext()": {
+          "Lines": {
+            "48": 3,
+            "49": 3,
+            "51": 3,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "56": 1,
+            "57": 1,
+            "58": 1,
+            "61": 2,
+            "62": 2,
+            "64": 2,
+            "65": 2,
+            "66": 2,
+            "67": 2,
+            "68": 2,
+            "69": 2,
+            "70": 3
+          },
+          "Branches": [
+            {
+              "Line": 51,
+              "Offset": 335,
+              "EndOffset": 337,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 51,
+              "Offset": 335,
+              "EndOffset": 377,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "PhoneBook.API.Services.ContactInformationService/<GetAllContactInformations>d__3": {
+        "System.Void PhoneBook.API.Services.ContactInformationService/<GetAllContactInformations>d__3::MoveNext()": {
+          "Lines": {
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "82": 0,
+            "83": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Services\\PersonService.cs": {
+      "PhoneBook.API.Services.PersonService": {
+        "System.Void PhoneBook.API.Services.PersonService::.ctor(PhoneBook.API.Entities.Context.PhoneBookContext)": {
+          "Lines": {
+            "11": 5,
+            "12": 5,
+            "13": 5
+          },
+          "Branches": []
+        }
+      },
+      "PhoneBook.API.Services.PersonService/<AddPerson>d__1": {
+        "System.Void PhoneBook.API.Services.PersonService/<AddPerson>d__1::MoveNext()": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "24": 1,
+            "25": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 1
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 369,
+              "EndOffset": 371,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 27,
+              "Offset": 369,
+              "EndOffset": 413,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "PhoneBook.API.Services.PersonService/<DeletePerson>d__2": {
+        "System.Void PhoneBook.API.Services.PersonService/<DeletePerson>d__2::MoveNext()": {
+          "Lines": {
+            "46": 1,
+            "47": 1,
+            "49": 1,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "59": 1,
+            "60": 1,
+            "62": 1,
+            "63": 1,
+            "64": 1,
+            "65": 1,
+            "66": 1,
+            "67": 1,
+            "68": 1
+          },
+          "Branches": [
+            {
+              "Line": 49,
+              "Offset": 335,
+              "EndOffset": 337,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 335,
+              "EndOffset": 377,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "PhoneBook.API.Services.PersonService/<GetAllPersons>d__3": {
+        "System.Void PhoneBook.API.Services.PersonService/<GetAllPersons>d__3::MoveNext()": {
+          "Lines": {
+            "71": 1,
+            "72": 1,
+            "73": 1,
+            "74": 1,
+            "75": 1,
+            "76": 1,
+            "77": 1,
+            "78": 1,
+            "79": 1
+          },
+          "Branches": []
+        }
+      },
+      "PhoneBook.API.Services.PersonService/<GetPerson>d__4": {
+        "System.Void PhoneBook.API.Services.PersonService/<GetPerson>d__4::MoveNext()": {
+          "Lines": {
+            "82": 1,
+            "83": 1,
+            "84": 1,
+            "85": 1,
+            "86": 1,
+            "87": 1,
+            "88": 1,
+            "89": 1,
+            "90": 1
+          },
+          "Branches": []
+        }
+      },
+      "PhoneBook.API.Services.PersonService/<GetPersonDetail>d__5": {
+        "System.Void PhoneBook.API.Services.PersonService/<GetPersonDetail>d__5::MoveNext()": {
+          "Lines": {
+            "93": 1,
+            "94": 1,
+            "95": 1,
+            "96": 1,
+            "97": 1,
+            "98": 1,
+            "99": 1,
+            "100": 1,
+            "101": 1,
+            "102": 1,
+            "103": 1,
+            "104": 1,
+            "105": 1,
+            "106": 1,
+            "107": 1,
+            "108": 1,
+            "109": 1,
+            "111": 1,
+            "112": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Services\\Base\\BaseService.cs": {
+      "PhoneBook.API.Services.Base.BaseService": {
+        "System.Void PhoneBook.API.Services.Base.BaseService::.ctor(PhoneBook.API.Entities.Context.PhoneBookContext)": {
+          "Lines": {
+            "9": 10,
+            "10": 10,
+            "11": 10,
+            "12": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Migrations\\20211217233720_Initial.cs": {
+      "PhoneBook.API.Migrations.Initial": {
+        "System.Void PhoneBook.API.Migrations.Initial::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": []
+        },
+        "System.Void PhoneBook.API.Migrations.Initial::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Migrations\\20211217233720_Initial.Designer.cs": {
+      "PhoneBook.API.Migrations.Initial": {
+        "System.Void PhoneBook.API.Migrations.Initial::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "91": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Migrations\\20211218131729_DBv2.cs": {
+      "PhoneBook.API.Migrations.DBv2": {
+        "System.Void PhoneBook.API.Migrations.DBv2::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0
+          },
+          "Branches": []
+        },
+        "System.Void PhoneBook.API.Migrations.DBv2::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Migrations\\20211218131729_DBv2.Designer.cs": {
+      "PhoneBook.API.Migrations.DBv2": {
+        "System.Void PhoneBook.API.Migrations.DBv2::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "89": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Migrations\\PhoneBookContextModelSnapshot.cs": {
+      "PhoneBook.API.Migrations.PhoneBookContextModelSnapshot": {
+        "System.Void PhoneBook.API.Migrations.PhoneBookContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "87": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Middlewares\\ErrorHandlingMiddleware.cs": {
+      "PhoneBook.API.Middlewares.ErrorHandlingMiddleware": {
+        "System.Threading.Tasks.Task PhoneBook.API.Middlewares.ErrorHandlingMiddleware::HandleExceptions(Microsoft.AspNetCore.Http.HttpContext,System.Exception)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Void PhoneBook.API.Middlewares.ErrorHandlingMiddleware::.ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger`1<PhoneBook.API.Middlewares.ErrorHandlingMiddleware>)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "PhoneBook.API.Middlewares.ErrorHandlingMiddleware/<Invoke>d__4": {
+        "System.Void PhoneBook.API.Middlewares.ErrorHandlingMiddleware/<Invoke>d__4::MoveNext()": {
+          "Lines": {
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Entities\\ContactInformation.cs": {
+      "PhoneBook.API.Entities.ContactInformation": {
+        "PhoneBook.API.Enums.InformationType PhoneBook.API.Entities.ContactInformation::get_InformationType()": {
+          "Lines": {
+            "10": 4
+          },
+          "Branches": []
+        },
+        "System.String PhoneBook.API.Entities.ContactInformation::get_InformationContent()": {
+          "Lines": {
+            "11": 4
+          },
+          "Branches": []
+        },
+        "System.Guid PhoneBook.API.Entities.ContactInformation::get_PersonUUID()": {
+          "Lines": {
+            "12": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Entities\\Person.cs": {
+      "PhoneBook.API.Entities.Person": {
+        "System.String PhoneBook.API.Entities.Person::get_Name()": {
+          "Lines": {
+            "9": 16
+          },
+          "Branches": []
+        },
+        "System.String PhoneBook.API.Entities.Person::get_Surname()": {
+          "Lines": {
+            "10": 16
+          },
+          "Branches": []
+        },
+        "System.String PhoneBook.API.Entities.Person::get_Company()": {
+          "Lines": {
+            "11": 15
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<PhoneBook.API.Entities.ContactInformation> PhoneBook.API.Entities.Person::get_ContactInformations()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Entities\\Context\\PhoneBookContext.cs": {
+      "PhoneBook.API.Entities.Context.PhoneBookContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<PhoneBook.API.Entities.Person> PhoneBook.API.Entities.Context.PhoneBookContext::get_Persons()": {
+          "Lines": {
+            "15": 35
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<PhoneBook.API.Entities.ContactInformation> PhoneBook.API.Entities.Context.PhoneBookContext::get_ContactInformations()": {
+          "Lines": {
+            "16": 18
+          },
+          "Branches": []
+        },
+        "System.Void PhoneBook.API.Entities.Context.PhoneBookContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
+          "Lines": {
+            "7": 10,
+            "8": 10,
+            "9": 10
+          },
+          "Branches": []
+        },
+        "System.Void PhoneBook.API.Entities.Context.PhoneBookContext::.ctor()": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Entities\\Base\\BaseEntity.cs": {
+      "PhoneBook.API.Entities.Base.BaseEntity": {
+        "System.Guid PhoneBook.API.Entities.Base.BaseEntity::get_UUID()": {
+          "Lines": {
+            "9": 9
+          },
+          "Branches": []
+        },
+        "System.DateTime PhoneBook.API.Entities.Base.BaseEntity::get_CreationDate()": {
+          "Lines": {
+            "10": 19
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Dto\\ContactInformationDto.cs": {
+      "PhoneBook.API.Dto.ContactInformationDto": {
+        "System.Guid PhoneBook.API.Dto.ContactInformationDto::get_UUID()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "PhoneBook.API.Enums.InformationType PhoneBook.API.Dto.ContactInformationDto::get_InformationType()": {
+          "Lines": {
+            "8": 5
+          },
+          "Branches": []
+        },
+        "System.String PhoneBook.API.Dto.ContactInformationDto::get_InformationContent()": {
+          "Lines": {
+            "9": 5
+          },
+          "Branches": []
+        },
+        "System.Guid PhoneBook.API.Dto.ContactInformationDto::get_PersonId()": {
+          "Lines": {
+            "10": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Dto\\PersonDetailDto.cs": {
+      "PhoneBook.API.Dto.PersonDetailDto": {
+        "PhoneBook.API.Dto.PersonDto PhoneBook.API.Dto.PersonDetailDto::get_Person()": {
+          "Lines": {
+            "5": 1
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<PhoneBook.API.Dto.ContactInformationDto> PhoneBook.API.Dto.PersonDetailDto::get_ContactInformations()": {
+          "Lines": {
+            "6": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Dto\\PersonDto.cs": {
+      "PhoneBook.API.Dto.PersonDto": {
+        "System.Guid PhoneBook.API.Dto.PersonDto::get_UUID()": {
+          "Lines": {
+            "5": 4
+          },
+          "Branches": []
+        },
+        "System.String PhoneBook.API.Dto.PersonDto::get_Name()": {
+          "Lines": {
+            "6": 7
+          },
+          "Branches": []
+        },
+        "System.String PhoneBook.API.Dto.PersonDto::get_Surname()": {
+          "Lines": {
+            "7": 7
+          },
+          "Branches": []
+        },
+        "System.String PhoneBook.API.Dto.PersonDto::get_Company()": {
+          "Lines": {
+            "8": 7
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Dto\\ReportRequestDto.cs": {
+      "PhoneBook.API.Dto.ReportRequestDto": {
+        "System.Guid PhoneBook.API.Dto.ReportRequestDto::get_ReportId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Dto\\ReturnDto.cs": {
+      "PhoneBook.API.Dto.ReturnDto": {
+        "System.Boolean PhoneBook.API.Dto.ReturnDto::get_IsSuccess()": {
+          "Lines": {
+            "5": 25
+          },
+          "Branches": []
+        },
+        "System.String PhoneBook.API.Dto.ReturnDto::get_Message()": {
+          "Lines": {
+            "6": 10
+          },
+          "Branches": []
+        },
+        "System.Object PhoneBook.API.Dto.ReturnDto::get_Data()": {
+          "Lines": {
+            "7": 7
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Controllers\\PersonsController.cs": {
+      "PhoneBook.API.Controllers.PersonsController": {
+        "System.Void PhoneBook.API.Controllers.PersonsController::.ctor(PhoneBook.API.Services.IPersonService,PhoneBook.API.Services.IContactInformationService)": {
+          "Lines": {
+            "14": 13,
+            "15": 13,
+            "16": 13,
+            "17": 13,
+            "18": 13
+          },
+          "Branches": []
+        }
+      },
+      "PhoneBook.API.Controllers.PersonsController/<AddContactInformation>d__5": {
+        "System.Void PhoneBook.API.Controllers.PersonsController/<AddContactInformation>d__5::MoveNext()": {
+          "Lines": {
+            "54": 3,
+            "55": 3,
+            "56": 1,
+            "58": 2,
+            "60": 2,
+            "61": 1,
+            "63": 1,
+            "64": 3
+          },
+          "Branches": [
+            {
+              "Line": 55,
+              "Offset": 26,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 55,
+              "Offset": 26,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 60,
+              "Offset": 208,
+              "EndOffset": 210,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 60,
+              "Offset": 208,
+              "EndOffset": 240,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "PhoneBook.API.Controllers.PersonsController/<AddPerson>d__3": {
+        "System.Void PhoneBook.API.Controllers.PersonsController/<AddPerson>d__3::MoveNext()": {
+          "Lines": {
+            "24": 2,
+            "25": 2,
+            "26": 1,
+            "28": 1,
+            "30": 1,
+            "31": 1,
+            "33": 0,
+            "34": 2
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 26,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 25,
+              "Offset": 26,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 30,
+              "Offset": 202,
+              "EndOffset": 204,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 30,
+              "Offset": 202,
+              "EndOffset": 234,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "PhoneBook.API.Controllers.PersonsController/<DeleteContactInformation>d__6": {
+        "System.Void PhoneBook.API.Controllers.PersonsController/<DeleteContactInformation>d__6::MoveNext()": {
+          "Lines": {
+            "70": 2,
+            "71": 2,
+            "73": 2,
+            "74": 1,
+            "76": 1,
+            "77": 2
+          },
+          "Branches": [
+            {
+              "Line": 73,
+              "Offset": 169,
+              "EndOffset": 171,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 73,
+              "Offset": 169,
+              "EndOffset": 201,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "PhoneBook.API.Controllers.PersonsController/<DeletePerson>d__4": {
+        "System.Void PhoneBook.API.Controllers.PersonsController/<DeletePerson>d__4::MoveNext()": {
+          "Lines": {
+            "40": 2,
+            "41": 2,
+            "43": 2,
+            "44": 1,
+            "46": 1,
+            "47": 2
+          },
+          "Branches": [
+            {
+              "Line": 43,
+              "Offset": 169,
+              "EndOffset": 171,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 43,
+              "Offset": 169,
+              "EndOffset": 201,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "PhoneBook.API.Controllers.PersonsController/<GetAllContactInformations>d__10": {
+        "System.Void PhoneBook.API.Controllers.PersonsController/<GetAllContactInformations>d__10::MoveNext()": {
+          "Lines": {
+            "108": 1,
+            "109": 1,
+            "111": 1,
+            "112": 1
+          },
+          "Branches": []
+        }
+      },
+      "PhoneBook.API.Controllers.PersonsController/<GetAllPersons>d__7": {
+        "System.Void PhoneBook.API.Controllers.PersonsController/<GetAllPersons>d__7::MoveNext()": {
+          "Lines": {
+            "82": 1,
+            "83": 1,
+            "85": 1,
+            "86": 1
+          },
+          "Branches": []
+        }
+      },
+      "PhoneBook.API.Controllers.PersonsController/<GetPerson>d__8": {
+        "System.Void PhoneBook.API.Controllers.PersonsController/<GetPerson>d__8::MoveNext()": {
+          "Lines": {
+            "91": 1,
+            "92": 1,
+            "94": 1,
+            "95": 1
+          },
+          "Branches": []
+        }
+      },
+      "PhoneBook.API.Controllers.PersonsController/<GetPersonDetail>d__9": {
+        "System.Void PhoneBook.API.Controllers.PersonsController/<GetPersonDetail>d__9::MoveNext()": {
+          "Lines": {
+            "100": 1,
+            "101": 1,
+            "103": 1,
+            "104": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Controllers\\ReportsController.cs": {
+      "PhoneBook.API.Controllers.ReportsController": {
+        "System.Void PhoneBook.API.Controllers.ReportsController::.ctor(System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger`1<PhoneBook.API.Controllers.ReportsController>,Microsoft.Extensions.Options.IOptions`1<PhoneBook.API.Constants.PhoneBookSettings>)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      },
+      "PhoneBook.API.Controllers.ReportsController/<GenerateReport>d__4": {
+        "System.Void PhoneBook.API.Controllers.ReportsController/<GenerateReport>d__4::MoveNext()": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "56": 0,
+            "58": 0,
+            "59": 0,
+            "61": 0,
+            "62": 0,
+            "64": 0,
+            "66": 0,
+            "67": 0
+          },
+          "Branches": [
+            {
+              "Line": 36,
+              "Offset": 242,
+              "EndOffset": 244,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 242,
+              "EndOffset": 266,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\PhoneBook.API\\Constants\\PhoneBookSettings.cs": {
+      "PhoneBook.API.Constants.PhoneBookSettings": {
+        "System.String PhoneBook.API.Constants.PhoneBookSettings::get_ReportApiUrl()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String PhoneBook.API.Constants.PhoneBookSettings::get_RabbitMqCon()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "Report.API.dll": {
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Program.cs": {
+      "Program": {
+        "System.Void Program::<Main>$(System.String[])": {
+          "Lines": {
+            "10": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "35": 0,
+            "37": 0,
+            "39": 0,
+            "41": 0
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 230,
+              "EndOffset": 232,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 230,
+              "EndOffset": 250,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Services\\ReportService.cs": {
+      "Report.API.Services.ReportService": {
+        "System.Void Report.API.Services.ReportService::.ctor(Report.API.Entities.Context.ReportContext,System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger`1<Report.API.Services.ReportService>,Microsoft.Extensions.Options.IOptions`1<Report.API.Constants.ReportSettings>)": {
+          "Lines": {
+            "19": 5,
+            "20": 5,
+            "21": 5,
+            "22": 5,
+            "23": 5,
+            "24": 5,
+            "25": 5
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 24,
+              "Offset": 32,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "Report.API.Services.ReportService/<>c": {
+        "System.Boolean Report.API.Services.ReportService/<>c::<GenerateStatisticsReport>b__5_0(Report.API.Dto.ContactInformationDto)": {
+          "Lines": {
+            "44": 4
+          },
+          "Branches": []
+        },
+        "System.Guid Report.API.Services.ReportService/<>c::<GenerateStatisticsReport>b__5_7(Report.API.Dto.ContactInformationDto)": {
+          "Lines": {
+            "49": 1
+          },
+          "Branches": [
+            {
+              "Line": 49,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 26,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 26,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 6,
+              "EndOffset": 104,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "Report.API.Services.ReportService/<>c__DisplayClass5_0": {
+        "Report.API.Entities.ReportDetail Report.API.Services.ReportService/<>c__DisplayClass5_0::<GenerateStatisticsReport>b__2(System.String)": {
+          "Lines": {
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 1,
+            "50": 2
+          },
+          "Branches": [
+            {
+              "Line": 48,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 48,
+              "Offset": 7,
+              "EndOffset": 28,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Report.API.Services.ReportService/<CreateNewReport>d__6": {
+        "System.Void Report.API.Services.ReportService/<CreateNewReport>d__6::MoveNext()": {
+          "Lines": {
+            "59": 1,
+            "60": 1,
+            "61": 1,
+            "62": 1,
+            "63": 1,
+            "64": 1,
+            "66": 1,
+            "67": 1,
+            "69": 1,
+            "70": 1
+          },
+          "Branches": []
+        }
+      },
+      "Report.API.Services.ReportService/<GenerateStatisticsReport>d__5": {
+        "System.Void Report.API.Services.ReportService/<GenerateStatisticsReport>d__5::MoveNext()": {
+          "Lines": {
+            "28": 2,
+            "29": 2,
+            "31": 2,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "41": 1,
+            "42": 1,
+            "52": 1,
+            "54": 1,
+            "55": 1,
+            "56": 1
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 366,
+              "EndOffset": 368,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 31,
+              "Offset": 366,
+              "EndOffset": 402,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "Report.API.Services.ReportService/<GetAllReports>d__7": {
+        "System.Void Report.API.Services.ReportService/<GetAllReports>d__7::MoveNext()": {
+          "Lines": {
+            "73": 1,
+            "74": 1,
+            "75": 1,
+            "76": 1,
+            "77": 1,
+            "78": 1,
+            "79": 1,
+            "81": 1,
+            "82": 1
+          },
+          "Branches": []
+        }
+      },
+      "Report.API.Services.ReportService/<GetReportDetail>d__8": {
+        "System.Void Report.API.Services.ReportService/<GetReportDetail>d__8::MoveNext()": {
+          "Lines": {
+            "85": 1,
+            "86": 1,
+            "87": 1,
+            "88": 1,
+            "89": 1,
+            "90": 1,
+            "91": 1,
+            "92": 1,
+            "93": 1,
+            "94": 1,
+            "95": 1,
+            "96": 1,
+            "97": 1,
+            "98": 1,
+            "99": 1,
+            "100": 1,
+            "101": 1,
+            "102": 1,
+            "104": 1,
+            "105": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\ServiceExtensions\\RabbitMqService.cs": {
+      "Report.API.ServiceExtensions.RabbitMqService": {
+        "Microsoft.AspNetCore.Builder.IApplicationBuilder Report.API.ServiceExtensions.RabbitMqService::UseRabbitMq(Microsoft.AspNetCore.Builder.IApplicationBuilder)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "18": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "49": 0,
+            "50": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Migrations\\20211218194748_Initial.cs": {
+      "Report.API.Migrations.Initial": {
+        "System.Void Report.API.Migrations.Initial::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Void Report.API.Migrations.Initial::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Migrations\\20211218194748_Initial.Designer.cs": {
+      "Report.API.Migrations.Initial": {
+        "System.Void Report.API.Migrations.Initial::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Migrations\\20211218214036_DBv2.cs": {
+      "Report.API.Migrations.DBv2": {
+        "System.Void Report.API.Migrations.DBv2::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        },
+        "System.Void Report.API.Migrations.DBv2::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Migrations\\20211218214036_DBv2.Designer.cs": {
+      "Report.API.Migrations.DBv2": {
+        "System.Void Report.API.Migrations.DBv2::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "83": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Migrations\\ReportContextModelSnapshot.cs": {
+      "Report.API.Migrations.ReportContextModelSnapshot": {
+        "System.Void Report.API.Migrations.ReportContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "81": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Helpers\\EnumHelper.cs": {
+      "Report.API.Helpers.EnumHelper": {
+        "System.String Report.API.Helpers.EnumHelper::GetDescription(T)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "12": 0,
+            "13": 0,
+            "15": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": [
+            {
+              "Line": 12,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 42,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 60,
+              "EndOffset": 62,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 60,
+              "EndOffset": 66,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 72,
+              "EndOffset": 74,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 72,
+              "EndOffset": 80,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Entities\\Report.cs": {
+      "Report.API.Entities.Report": {
+        "System.DateTime Report.API.Entities.Report::get_RequestDate()": {
+          "Lines": {
+            "10": 1
+          },
+          "Branches": []
+        },
+        "Report.API.Enums.ReportStatus Report.API.Entities.Report::get_ReportStatus()": {
+          "Lines": {
+            "11": 7
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Report.API.Entities.ReportDetail> Report.API.Entities.Report::get_ReportDetails()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Entities\\ReportDetail.cs": {
+      "Report.API.Entities.ReportDetail": {
+        "System.String Report.API.Entities.ReportDetail::get_Location()": {
+          "Lines": {
+            "9": 2
+          },
+          "Branches": []
+        },
+        "System.Int32 Report.API.Entities.ReportDetail::get_PersonCount()": {
+          "Lines": {
+            "10": 2
+          },
+          "Branches": []
+        },
+        "System.Int32 Report.API.Entities.ReportDetail::get_PhoneNumberCount()": {
+          "Lines": {
+            "11": 2
+          },
+          "Branches": []
+        },
+        "System.Guid Report.API.Entities.ReportDetail::get_ReportId()": {
+          "Lines": {
+            "12": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Entities\\Context\\ReportContext.cs": {
+      "Report.API.Entities.Context.ReportContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<Report.API.Entities.Report> Report.API.Entities.Context.ReportContext::get_Reports()": {
+          "Lines": {
+            "11": 16
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Report.API.Entities.ReportDetail> Report.API.Entities.Context.ReportContext::get_ReportDetails()": {
+          "Lines": {
+            "12": 7
+          },
+          "Branches": []
+        },
+        "System.Void Report.API.Entities.Context.ReportContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
+          "Lines": {
+            "7": 5,
+            "8": 5,
+            "9": 5
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Entities\\Base\\BaseEntity.cs": {
+      "Report.API.Entities.Base.BaseEntity": {
+        "System.Guid Report.API.Entities.Base.BaseEntity::get_UUID()": {
+          "Lines": {
+            "9": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Dto\\ContactInformationDto.cs": {
+      "Report.API.Dto.ContactInformationDto": {
+        "System.Guid Report.API.Dto.ContactInformationDto::get_UUID()": {
+          "Lines": {
+            "5": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Report.API.Dto.ContactInformationDto::get_InformationType()": {
+          "Lines": {
+            "6": 4
+          },
+          "Branches": []
+        },
+        "System.String Report.API.Dto.ContactInformationDto::get_InformationContent()": {
+          "Lines": {
+            "7": 3
+          },
+          "Branches": []
+        },
+        "System.Guid Report.API.Dto.ContactInformationDto::get_PersonId()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Dto\\ReportDetailDto.cs": {
+      "Report.API.Dto.ReportDetailDto": {
+        "Report.API.Dto.ReportDto Report.API.Dto.ReportDetailDto::get_Report()": {
+          "Lines": {
+            "5": 3
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Report.API.Dto.StatisticDto> Report.API.Dto.ReportDetailDto::get_ReportDetails()": {
+          "Lines": {
+            "6": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Dto\\ReportDto.cs": {
+      "Report.API.Dto.ReportDto": {
+        "System.Guid Report.API.Dto.ReportDto::get_UUID()": {
+          "Lines": {
+            "8": 4
+          },
+          "Branches": []
+        },
+        "System.DateTime Report.API.Dto.ReportDto::get_RequestDate()": {
+          "Lines": {
+            "9": 3
+          },
+          "Branches": []
+        },
+        "Report.API.Enums.ReportStatus Report.API.Dto.ReportDto::get_ReportStatus()": {
+          "Lines": {
+            "10": 3
+          },
+          "Branches": []
+        },
+        "System.String Report.API.Dto.ReportDto::get_ReportStatusDescription()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Dto\\ReportRequestDto.cs": {
+      "Report.API.Dto.ReportRequestDto": {
+        "System.Guid Report.API.Dto.ReportRequestDto::get_ReportId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Dto\\StatisticDto.cs": {
+      "Report.API.Dto.StatisticDto": {
+        "System.Guid Report.API.Dto.StatisticDto::get_UUID()": {
+          "Lines": {
+            "5": 1
+          },
+          "Branches": []
+        },
+        "System.String Report.API.Dto.StatisticDto::get_Location()": {
+          "Lines": {
+            "6": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Report.API.Dto.StatisticDto::get_PersonCount()": {
+          "Lines": {
+            "7": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Report.API.Dto.StatisticDto::get_PhoneNumberCount()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Controllers\\ReportsController.cs": {
+      "Report.API.Controllers.ReportsController": {
+        "System.Void Report.API.Controllers.ReportsController::.ctor(Report.API.Services.IReportService)": {
+          "Lines": {
+            "14": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4
+          },
+          "Branches": []
+        }
+      },
+      "Report.API.Controllers.ReportsController/<GetAllReports>d__3": {
+        "System.Void Report.API.Controllers.ReportsController/<GetAllReports>d__3::MoveNext()": {
+          "Lines": {
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1
+          },
+          "Branches": []
+        }
+      },
+      "Report.API.Controllers.ReportsController/<GetReportDetail>d__4": {
+        "System.Void Report.API.Controllers.ReportsController/<GetReportDetail>d__4::MoveNext()": {
+          "Lines": {
+            "39": 2,
+            "40": 2,
+            "42": 2,
+            "43": 1,
+            "45": 1,
+            "46": 2
+          },
+          "Branches": [
+            {
+              "Line": 42,
+              "Offset": 164,
+              "EndOffset": 166,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 42,
+              "Offset": 164,
+              "EndOffset": 185,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "Report.API.Controllers.ReportsController/<ReportRequest>d__2": {
+        "System.Void Report.API.Controllers.ReportsController/<ReportRequest>d__2::MoveNext()": {
+          "Lines": {
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Developer\\repo\\workshop\\PhoneBook\\Report.API\\Constants\\ReportSettings.cs": {
+      "Report.API.Constants.ReportSettings": {
+        "System.String Report.API.Constants.ReportSettings::get_PhoneBookApiUrl()": {
+          "Lines": {
+            "5": 3
+          },
+          "Branches": []
+        },
+        "System.String Report.API.Constants.ReportSettings::get_RabbitMqCon()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
