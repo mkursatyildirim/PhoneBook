@@ -87,26 +87,18 @@ namespace PhoneBook.API.Controllers
 
         [HttpGet("{personId}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<PersonDto>> GetPerson(Guid personId)
         {
             var person = await _personService.GetPerson(personId);
-
-            if(person == null)
-                return NotFound("Kişi bulunamadı.");
 
             return Ok(person);
         }
 
         [HttpGet("{personId}/Detail")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<PersonDetailDto>> GetPersonDetail(Guid personId)
         {
             var result = await _personService.GetPersonDetail(personId);
-
-            if (result == null)
-                return NotFound("Kişi bilgisi bulunamadı.");
 
             return Ok(result);
         }
