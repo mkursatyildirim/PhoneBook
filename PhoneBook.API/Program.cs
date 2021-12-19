@@ -19,6 +19,7 @@ builder.Services.Configure<PhoneBookSettings>(builder.Configuration.GetSection("
 builder.Services.AddHttpClient();
 
 var app = builder.Build();
+app.Services.CreateScope().ServiceProvider.GetRequiredService<PhoneBookContext>().Database.Migrate();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
