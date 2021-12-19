@@ -2,6 +2,7 @@
 using Moq;
 using PhoneBook.API.Controllers;
 using PhoneBook.API.Dto;
+using PhoneBook.API.Enums;
 using PhoneBook.API.Services;
 using PhoneBook.Tests.Helpers;
 using System;
@@ -41,7 +42,10 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Controllers
             var mockPersonService = new Mock<IPersonService>();
             mockPersonService
                 .Setup(x => x.AddPerson(It.IsAny<PersonDto>()))
-                .ReturnsAsync(() => new ReturnDto());
+                .ReturnsAsync(() => new ReturnDto()
+                {
+                    IsSuccess = false
+                });
 
             var personsController = new PersonsController(mockPersonService.Object, new Mock<IContactInformationService>().Object);
 
@@ -51,16 +55,112 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Controllers
         }
 
         [Fact]
-        public async Task DeletePerson_With_Valid_Params_Should_Return_404()
+        public async Task DeletePerson_With_Valid_Params_Should_Return_200()
+        {
+            var id = Guid.NewGuid();
+            var mockPersonService = new Mock<IPersonService>();
+            mockPersonService
+                .Setup(x => x.DeletePerson(id))
+                .ReturnsAsync(() => new ReturnDto()
+                {
+                    IsSuccess = true
+                });
+
+            var personsController = new PersonsController(mockPersonService.Object, new Mock<IContactInformationService>().Object);
+
+            var result = await personsController.DeletePerson(id);
+
+            Assert.Equal(200, TestHelper.GetStatusCodeFromActionResult(result));
+        }
+
+        [Fact]
+        public async Task DeletePerson_With_Valid_Params_But_No_Person_Should_Return_404()
         {
             var mockPersonService = new Mock<IPersonService>();
             mockPersonService
                 .Setup(x => x.DeletePerson(It.IsAny<Guid>()))
-                .ReturnsAsync(() => new ReturnDto());
+                .ReturnsAsync(() => new ReturnDto()
+                {
+                    IsSuccess = false
+                });
 
             var personsController = new PersonsController(mockPersonService.Object, new Mock<IContactInformationService>().Object);
 
             var result = await personsController.DeletePerson(Guid.NewGuid());
+
+            Assert.Equal(404, TestHelper.GetStatusCodeFromActionResult(result));
+        }
+
+        [Fact]
+        public async Task AddContactInformation_With_Valid_Params_Should_Return_201()
+        {
+            var mockContactInformationService = new Mock<IContactInformationService>();
+
+            var id = Guid.NewGuid();
+
+            mockContactInformationService
+                .Setup(x => x.AddContactInformation(id, It.IsAny<ContactInformationDto>()))
+                .ReturnsAsync(() => new ReturnDto()
+                {
+                    IsSuccess = true
+                });
+
+            var personsController = new PersonsController(new Mock<IPersonService>().Object, mockContactInformationService.Object);
+
+
+            var result = await personsController.AddContactInformation(id, new ContactInformationDto()
+            {
+                InformationType = InformationType.PhoneNumber,
+                InformationContent = "05320000000",
+                PersonId = Guid.NewGuid(),
+            });
+
+            Assert.Equal(201, TestHelper.GetStatusCodeFromActionResult(result));
+        }
+
+        [Fact]
+        public async Task AddContactInformation_With_Invalid_Params_Should_Return_Null()
+        {
+            var mockContactInformationService = new Mock<IContactInformationService>();
+
+            var id = Guid.NewGuid();
+
+            mockContactInformationService
+                .Setup(x => x.AddContactInformation(id, It.IsAny<ContactInformationDto>()))
+                .ReturnsAsync(() => new ReturnDto()
+                {
+                    IsSuccess = true
+                });
+
+            var personsController = new PersonsController(new Mock<IPersonService>().Object, mockContactInformationService.Object);
+
+
+            var result = await personsController.AddContactInformation(id, null);
+
+            Assert.Null(result.Value);
+        }
+
+        [Fact]
+        public async Task AddContactInformation_With_Valid_Params_But_No_Person_Should_Return_404()
+        {
+            var mockContactInformationService = new Mock<IContactInformationService>();
+
+            mockContactInformationService
+                .Setup(x => x.AddContactInformation(Guid.Empty, It.IsAny<ContactInformationDto>()))
+                .ReturnsAsync(() => new ReturnDto()
+                {
+                    IsSuccess = false
+                });
+
+            var personsController = new PersonsController(new Mock<IPersonService>().Object, mockContactInformationService.Object);
+
+
+            var result = await personsController.AddContactInformation(Guid.Empty, new ContactInformationDto()
+            {
+                InformationType = InformationType.PhoneNumber,
+                InformationContent = "05320000000",
+                PersonId = Guid.NewGuid(),
+            });
 
             Assert.Equal(404, TestHelper.GetStatusCodeFromActionResult(result));
         }
