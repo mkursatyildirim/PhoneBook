@@ -27,10 +27,10 @@ namespace PhoneBook.Tests.Report.API.Tests.Services
         public async Task GetAllReports_Should_Get_Reports()
         {
             var context = new ReportContext(TestHelper.GetReportContextForInMemoryDb());
-           
+
             context.Reports.Add(new Entities.Report()
             {
-               ReportStatus = ReportStatus.Preparing
+                ReportStatus = ReportStatus.Preparing
             });
 
             context.Reports.Add(new Entities.Report()
@@ -45,6 +45,36 @@ namespace PhoneBook.Tests.Report.API.Tests.Services
             var result = await service.GetAllReports();
 
             Assert.Equal(2, context.Reports.Local.Count);
+        }
+
+        [Fact]
+        public async Task GetReportDetail_With_Valid_Params_Should_Get_Report_Detail()
+        {
+            var context = new ReportContext(TestHelper.GetReportContextForInMemoryDb());
+
+            var reportId = Guid.NewGuid();
+            context.Reports.Add(new Entities.Report()
+            {
+                UUID = reportId,
+                ReportStatus = ReportStatus.Preparing
+            });
+
+            context.ReportDetails.Add(new Entities.ReportDetail()
+            {
+                Location = "Mersin",
+                PersonCount = 1,
+                PhoneNumberCount = 1,
+                ReportId = reportId
+            });
+
+            await context.SaveChangesAsync();
+
+            var service = new ReportService(context, null, null, null);
+
+            var result = await service.GetReportDetail(reportId);
+
+            Assert.NotNull(result.Report);
+            Assert.NotNull(result.ReportDetails);
         }
     }
 }
