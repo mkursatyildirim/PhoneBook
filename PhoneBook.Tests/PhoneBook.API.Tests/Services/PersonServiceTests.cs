@@ -44,7 +44,7 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Services
                 Company = "Bla Bla Inc."
             });
 
-            Assert.Equal(3, context.Persons.Count());
+            Assert.Equal(3, context.Persons.Local.Count);
         }
 
         [Fact]
@@ -75,7 +75,7 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Services
 
             var result = await service.DeletePerson(deletedPersonId);
             
-            Assert.Equal(1, context.Persons.Count());
+            Assert.Equal(1, context.Persons.Local.Count);
         }
 
         [Fact]
@@ -103,7 +103,7 @@ namespace PhoneBook.Tests.PhoneBook.API.Tests.Services
 
             var result = await service.GetAllPersons();
 
-            Assert.Equal(2, context.Persons.Count());
+            Assert.Equal(2, context.Persons.Local.Count);
         }
 
         [Fact]
