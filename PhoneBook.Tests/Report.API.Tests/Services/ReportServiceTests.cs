@@ -9,6 +9,7 @@ using Report.API.Entities.Context;
 using Report.API.Enums;
 using Report.API.Services;
 using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
@@ -104,10 +105,9 @@ namespace PhoneBook.Tests.Report.API.Tests.Services
             mockFactory.Setup(_ => _.CreateClient(It.IsAny<string>())).Returns(client);
             IOptions<ReportSettings> settings = Options.Create<ReportSettings>(new ReportSettings()
             {
-                PhoneBookApiUrl = "test_url"
+                PhoneBookApiUrl = "http://localhost"
             });
 
-            
             var serviceCollection = new ServiceCollection().AddLogging();
             var logger = serviceCollection.BuildServiceProvider().GetService<ILogger<ReportService>>();
 
@@ -115,8 +115,52 @@ namespace PhoneBook.Tests.Report.API.Tests.Services
 
             var service = new ReportService(context, mockFactory.Object, logger, settings);
 
-            Func<Task> func = () =>  service.GenerateStatisticsReport(Guid.Parse("a5ba5d9c-f6fa-4466-9ef6-508592438fc9"));             //assert
+            Func<Task> func = () => service.GenerateStatisticsReport(Guid.Parse("a5ba5d9c-f6fa-4466-9ef6-508592438fc9"));             //assert
             Exception exception = await Assert.ThrowsAsync<Exception>(func);
+        }
+
+        [Fact]
+        public async Task GenerateStatisticsReport_Should_Generate_Report()
+        {
+            var reportId = Guid.Parse("a5ba5d9c-f6fa-4466-9ef6-508592438fc9");
+            var mockHttpMessageHandler = new Mock<HttpMessageHandler>();
+            mockHttpMessageHandler.Protected()
+                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
+                .ReturnsAsync(new HttpResponseMessage
+                {
+                    StatusCode = HttpStatusCode.OK,
+                    Content = new StringContent("[{'uuid': 'a5ba5d9c-f6fa-4466-9ef6-508592438fc9','informationType':2,'informationContent':'Mersin', 'personId': 'b890413c-2dca-499a-8578-5cfb14e0b1eb'}]"),
+                });
+
+
+            var mockFactory = new Mock<IHttpClientFactory>();
+
+            var client = new HttpClient(mockHttpMessageHandler.Object);
+            mockFactory.Setup(_ => _.CreateClient(It.IsAny<string>())).Returns(client);
+            IOptions<ReportSettings> settings = Options.Create<ReportSettings>(new ReportSettings()
+            {
+                PhoneBookApiUrl = "http://localhost"
+            });
+
+            var serviceCollection = new ServiceCollection().AddLogging();
+            var logger = serviceCollection.BuildServiceProvider().GetService<ILogger<ReportService>>();
+
+            var context = new ReportContext(TestHelper.GetReportContextForInMemoryDb());
+
+            var report = new Entities.Report()
+            {
+                UUID = reportId,
+                ReportStatus = ReportStatus.Preparing
+            };
+
+            await context.Reports.AddAsync(report);
+            await context.SaveChangesAsync();
+
+            var service = new ReportService(context, mockFactory.Object, logger, settings);
+
+            await service.GenerateStatisticsReport(reportId);
+            var reportStatus = context.Reports.Where(x => x.UUID == reportId).FirstOrDefault().ReportStatus.GetHashCode();
+            Assert.Equal(ReportStatus.Completed.GetHashCode(), reportStatus); 
         }
     }
 }
